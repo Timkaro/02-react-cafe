@@ -14,17 +14,37 @@ export default function VoteOptions({
 }: VoteOptionsProps) {
   return (
     <div className={css.container}>
-      <button className={css.button} onClick={() => onVote("good")}>
+      <button
+        type="button"
+        className={css.button}
+        onClick={() => onVote("good")}
+        aria-label="Vote for good"
+      >
         Good
       </button>
-      <button className={css.button} onClick={() => onVote("neutral")}>
+      <button
+        type="button"
+        className={css.button}
+        onClick={() => onVote("neutral")}
+        aria-label="Vote for neutral"
+      >
         Neutral
       </button>
-      <button className={css.button} onClick={() => onVote("bad")}>
+      <button
+        type="button"
+        className={css.button}
+        onClick={() => onVote("bad")}
+        aria-label="Vote for bad"
+      >
         Bad
       </button>
       {canReset && (
-        <button className={`${css.button} ${css.reset}`} onClick={onReset}>
+        <button
+          type="button"
+          className={`${css.button} ${css.reset}`}
+          onClick={onReset}
+          aria-label="Reset votes"
+        >
           Reset
         </button>
       )}
